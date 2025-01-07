@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Dashboard</title>
+</head>
+<body class="bg-slate-800"> 
+    <div class="flex min-h-screen">
+        <aside class="hidden md:flex md:w-64 flex-col fixed h-full bg-slate-900 transition-all duration-300">
+       
+            <div class="p-4">
+                <h1 class="text-3xl font-bold text-emerald-500">Sezer</h1>
+            </div>
+
+            <nav class="flex-1 px-2 py-4 space-y-2">
+                <!-- Navigation  -->
+                <a href="#" class="flex items-center px-4 py-2 text-white rounded-lg hover:bg-slate-700 transition-colors">
+                    <span class="text-lg font-medium">Home</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-2 text-white rounded-lg hover:bg-slate-700 transition-colors">
+                    <span class="text-lg font-medium">Profile</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-2 text-white rounded-lg hover:bg-slate-700 transition-colors">
+                    <span class="text-lg font-medium">Messages</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-2 text-white rounded-lg hover:bg-slate-700 transition-colors">
+                    <span class="text-lg font-medium">History</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-2 text-white rounded-lg hover:bg-slate-700 transition-colors">
+                    <span class="text-lg font-medium">Tasks</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-2 text-white rounded-lg hover:bg-slate-700 transition-colors">
+                    <span class="text-lg font-medium">Communities</span>
+                </a>
+            </nav>
+
+            <!-- Bottom Navigation -->
+            <nav class="px-2 py-4 space-y-2 border-t border-slate-700">
+                <!-- Bottom navigation items remain the same -->
+                <a href="#" class="flex items-center px-4 py-2 text-white rounded-lg hover:bg-slate-700 transition-colors">
+                    <span class="text-lg font-medium">Settings</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-2 text-white rounded-lg hover:bg-slate-700 transition-colors">
+                    <span class="text-lg font-medium">Support</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-2 text-white rounded-lg hover:bg-slate-700 transition-colors">
+                    <span class="text-lg font-medium">Privacy</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 md:ml-64">
+            <!-- Header remains the same -->
+            <header class="bg-slate-800 border-b border-slate-700 p-4">
+                <!-- Header content remains the same -->
+                <div class="flex items-center justify-between">
+                    <button class="md:hidden p-2 rounded-lg hover:bg-slate-700 text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+
+                    <div class="flex-1 max-w-xl px-4">
+                        <div class="relative">
+                            <input type="text" class="w-full pl-4 pr-10 py-2 rounded-lg bg-slate-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Search...">
+                            <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+                        <img src="/api/placeholder/40/40" alt="User" class="w-10 h-10 rounded-full bg-slate-600">
+                        <span class="hidden md:block text-white font-medium">John Doe</span>
+                    </div>
+                </div>
+
+                <div class="mt-6 flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div class="flex items-center space-x-4">
+                        <img src="/api/placeholder/48/48" alt="User" class="w-12 h-12 rounded-full bg-slate-600">
+                        <h2 class="text-2xl font-bold text-white">Welcome back, <span class="text-emerald-500">John</span></h2>
+                    </div>
+                    <div class="mt-4 md:mt-0 flex space-x-2">
+                        <button class="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-500 transition-colors">New Project</button>
+                        <button class="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-500 transition-colors">Upload</button>
+                        <button class="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-500 transition-colors">Share</button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Updated Main Content Area -->
+            <main class="p-6">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <!-- Your Projects -->
+                    <div class="lg:col-span-2">
+                        <h3 class="text-xl font-bold text-white mb-4">Your Projects</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-slate-700 rounded-lg p-4 shadow-lg">
+                                <h4 class="text-lg font-semibold text-white mb-2">Super Cool Project</h4>
+                                <p class="text-slate-300 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="bg-slate-700 rounded-lg p-4 shadow-lg">
+                                <h4 class="text-lg font-semibold text-white mb-2">Super Cool Project</h4>
+                                <p class="text-slate-300 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="bg-slate-700 rounded-lg p-4 shadow-lg">
+                                <h4 class="text-lg font-semibold text-white mb-2">Super Cool Project</h4>
+                                <p class="text-slate-300 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="bg-slate-700 rounded-lg p-4 shadow-lg">
+                                <h4 class="text-lg font-semibold text-white mb-2">Super Cool Project</h4>
+                                <p class="text-slate-300 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="bg-slate-700 rounded-lg p-4 shadow-lg">
+                                <h4 class="text-lg font-semibold text-white mb-2">Super Cool Project</h4>
+                                <p class="text-slate-300 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="bg-slate-700 rounded-lg p-4 shadow-lg">
+                                <h4 class="text-lg font-semibold text-white mb-2">Super Cool Project</h4>
+                                <p class="text-slate-300 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="bg-slate-700 rounded-lg p-4 shadow-lg">
+                                <h4 class="text-lg font-semibold text-white mb-2">Super Sezer Project</h4>
+                                <p class="text-slate-300 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="bg-slate-700 rounded-lg p-4 shadow-lg">
+                                <h4 class="text-lg font-semibold text-white mb-2">Less Cool Project</h4>
+                                <p class="text-slate-300 text-sm">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Sidebar -->
+                    <div class="space-y-6">
+                        <!-- Announcements -->
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-4">Announcements</h3>
+                            <div class="bg-slate-700 rounded-lg p-4 shadow-lg">
+                                <div class="border-b border-slate-600 pb-2 mb-2">
+                                    <h4 class="text-lg font-semibold text-white">Site Maintenance</h4>
+                                    <p class="text-slate-300 text-sm">System update scheduled for next week...</p>
+                                </div>
+                                <div class="border-b border-slate-600 pb-2 mb-2">
+                                    <h4 class="text-lg font-semibold text-white">Community Share Day</h4>
+                                    <p class="text-slate-300 text-sm">Join us for our monthly share session...</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white">Updated Privacy Policy</h4>
+                                    <p class="text-slate-300 text-sm">Review our latest privacy updates...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Trending -->
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-4">Trending</h3>
+                            <div class="bg-slate-700 rounded-lg p-4 shadow-lg">
+                                <div class="flex items-center space-x-4 mb-4">
+                                    <img src="/api/placeholder/32/32" alt="Project 1" class="w-8 h-8 rounded-full bg-emerald-500">
+                                    <div>
+                                        <h4 class="text-white font-medium">@tegan</h4>
+                                        <p class="text-slate-300 text-sm">World Peace Builder</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4 mb-4">
+                                    <img src="/api/placeholder/32/32" alt="Project 2" class="w-8 h-8 rounded-full bg-emerald-500">
+                                    <div>
+                                        <h4 class="text-white font-medium">@morgan</h4>
+                                        <p class="text-slate-300 text-sm">Super Cool Project</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <img src="/api/placeholder/32/32" alt="Project 3" class="w-8 h-8 rounded-full bg-emerald-500">
+                                    <div>
+                                        <h4 class="text-white font-medium">@kendall</h4>
+                                        <p class="text-slate-300 text-sm">Life Changing App</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
